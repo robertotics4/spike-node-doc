@@ -1,0 +1,8 @@
+{
+  "exec": "tsoa spec && ts-node src/app.ts",
+  "watch": [
+    "src",
+    "tsoa.json"
+  ],
+  "ext": "ts"
+}

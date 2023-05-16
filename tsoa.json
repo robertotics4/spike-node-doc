@@ -6,7 +6,30 @@
   ],
   "spec": {
     "outputDirectory": "build",
-    "specVersion": 3
+    "specVersion": 3,
+    "tags": [
+      {
+        "name": "Product",
+        "description": "CRUD de operações em produtos (create, list, findById, remove e update)"
+      }
+    ],
+    "spec": {
+      "info": {
+        "title": "spike-node-doc",
+        "version": "1.0.0",
+        "description": "Aplicação que exemplifica o uso do TSOA para gerar documentação automática através de anotações"
+      },
+      "servers": [
+        {
+          "url": "http://localhost:3000",
+          "description": "Local development"
+        },
+        {
+          "url": "http://example:8080/api/v1",
+          "description": "Prod development"
+        }
+      ]
+    }
   },
   "routes": {
     "routesDir": "./src/routes"

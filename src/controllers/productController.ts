@@ -1,6 +1,9 @@
-import { Body, Controller, Delete, Example, Get, Path, Post, Put, Route, SuccessResponse } from 'tsoa';
+import { Body, Controller, Delete, Example, Get, Path, Post, Put, Route, SuccessResponse, Tags, Response } from 'tsoa';
 import { v4 as uuidv4 } from 'uuid';
 
+/**
+ * Entidade que representa as propriedades de um produto
+ */
 type Product = {
   /**
  * Stringified UUIDv4.
@@ -21,6 +24,7 @@ type CreateProductDTO = {
 const products: Product[] = []
 
 @Route('/products')
+@Tags("Product")
 export class ProductController extends Controller {
   /**
  * Retorna a lista de produtos
